@@ -23,14 +23,30 @@ export function aufgabe02(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === "") {
-      result.push("")
-    } else {
-      result.push(currentElement)
-    }
-
+    result.push(currentElement.toUpperCase() ) 
   }
-
-    
+  
   return result.join("")
 }
+
+export function aufgabe03 (args) {
+  const input = args
+  const result = []
+
+  let countE = 0
+
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+
+      if(currentElement === "e") {
+      countE = countE + 1
+    }
+      else if(currentElement ==="E"){
+      countE = countE + 1
+      }
+    }
+  
+  return countE
+}
+
+
