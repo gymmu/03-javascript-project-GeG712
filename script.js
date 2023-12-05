@@ -89,7 +89,15 @@ let count1 = 0
 }
 
 
-
+export function aufgabe07 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+  
+  }
+  return result.join("")
+}
 
 
 
