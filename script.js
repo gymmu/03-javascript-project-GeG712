@@ -80,28 +80,50 @@ return false
 } 
 
 
+//Wenn man Chat Gpt frägt: 
+
+// export function aufgabe06(args) {
+//   const input = args;
+//   const result = [];
+
+//   function Sonderzeichen(char) { 
+//       const XSonderzeichen = (char >= 48 && char <= 57) || (char >= 65 && char <= 90) || (char >= 97 && char <= 122);
+
+//     return !XSonderzeichen;
+//   }
+
+//   for (let i = 0; i < input.length; i++) {
+//     const currentElement = input[i];
+
+//     if (typeof currentElement === 'string') {
+//       const KeinSonderzeichen = currentElement.split('').filter(char => Sonderzeichen(char.charCodeAt(0))).join('');
+
+//       result.push(KeinSonderzeichen);
+//     }
+//   }
+
+//   return result.join("");
+// }
+
+
 export function aufgabe06(args) {
-  const input = args;
-  const result = [];
+  const input = args
 
-  function Sonderzeichen(char) { 
-      const XSonderzeichen = (char >= 48 && char <= 57) || (char >= 65 && char <= 90) || (char >= 97 && char <= 122);
-
-    return !XSonderzeichen;
-  }
-
+  if (input.length <= 0) return false
+  
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i];
+    const ascii = input[i].charCodeAt(0)
 
-    if (typeof currentElement === 'string') {
-      const KeinSonderzeichen = currentElement.split('').filter(char => Sonderzeichen(char.charCodeAt(0))).join('');
-
-      result.push(KeinSonderzeichen);
-    }
+    if(0 <= ascii && ascii <=31) return true
+    else if (33 <= ascii && ascii <= 47) return true
+    else if (58 <= ascii && ascii <= 64) return true
+    else if (91 <= ascii && ascii <= 96) return true
+    else if (123 <= ascii && ascii <= 127) return true
+  
   }
-
-  return result.join("");
+  return false
 }
+
 
 
 
