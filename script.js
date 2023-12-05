@@ -69,24 +69,42 @@ export function aufgabe04 (args) {
 
 export function aufgabe05 (args) {
   const input = args
-  const result = []
-
-let count1 = 0
-
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-
-    if(currentElement === currentElement.toUpperCase()) {
-        count1 = count1 + 1
-    }
-  }
   
- if(count1 > 0  )  {
-    return true
+  for (let i = 0; i < input.length; i++) {
+    const currentAscii = input[i].charCodeAt(0)
+   
+    if (65 <= currentAscii && currentAscii <=90) return true
+    
   }
-  else {return false}
+return false
+} 
 
-}
+
+//Wenn man Chat Gpt frägt: 
+
+// export function aufgabe06(args) {
+//   const input = args;
+//   const result = [];
+
+//   function Sonderzeichen(char) { 
+//       const XSonderzeichen = (char >= 48 && char <= 57) || (char >= 65 && char <= 90) || (char >= 97 && char <= 122);
+
+//     return !XSonderzeichen;
+//   }
+
+//   for (let i = 0; i < input.length; i++) {
+//     const currentElement = input[i];
+
+//     if (typeof currentElement === 'string') {
+//       const KeinSonderzeichen = currentElement.split('').filter(char => Sonderzeichen(char.charCodeAt(0))).join('');
+
+//       result.push(KeinSonderzeichen);
+//     }
+//   }
+
+//   return result.join("");
+// }
+
 
 
 export function aufgabe07 (args) {
