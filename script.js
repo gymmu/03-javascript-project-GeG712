@@ -144,6 +144,23 @@ export function aufgabe07 (args) {
   return false
 }
 
+// die aufgabe 7 musste erneut gelöst werden, da es probleme dirch die merge conflicte gab.
+
+export function aufgabe08(args) {
+  const input = args        
+  const result = []                     
+
+  for (let i = 0; i < input.length; i++) {      
+    const currentElement = input[i]        
+
+    if (currentElement === "e") {   
+      result.push(3)                                                           
+    } else {                                                 
+      result.push(currentElement)                             
+    }
+  }
+  return result.join("")                                        
+}
 
 
 
