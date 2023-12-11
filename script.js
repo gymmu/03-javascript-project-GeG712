@@ -195,7 +195,11 @@ export function aufgabe10 (args) {
       return false
     }
   }
+  return true
 }
+
+
+
 
 export function aufgabe11 (args) {
   const input = args
