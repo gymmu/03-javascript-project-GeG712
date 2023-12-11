@@ -301,3 +301,31 @@ export function aufgabe15 (args) {
 
   return result.join("")
 }
+
+export function aufgabe16 (args) {
+  const input = args
+  const result1 = []
+  const result2 = []
+  let Text = true
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+    if (currentElement === "$" && Text !== false) {
+      Text = false
+    } else {
+      if (Text === true) {
+        result1.push(currentElement)
+      }
+      else if (Text === false) {
+        result2.push(currentElement)
+      }
+    }
+  }
+  if (result2.join("") !== "") {
+  return result1.join("") + "," + result2.join("")
+  } else {
+    return result1.join("")
+  }
+}
+
