@@ -3,8 +3,9 @@ export function aufgabe01(args) {
   const result = []
 
   for (let i = 0; i < input.length; i++) {
+    //schaut ob es sich um eine E handelt welches dann zum leerzeichen gemacht wird
     const currentElement = input[i]
-    if (currentElement === "e"|| currentElement === "E") {
+    if (currentElement === "e"|| currentElement === "E") { 
       result.push("")
     } else {
       result.push(currentElement)
@@ -20,7 +21,7 @@ export function aufgabe01(args) {
 export function aufgabe02(args) {
   const input = args
   const result = []
-
+// macht alle zeichen groß
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     result.push(currentElement.toUpperCase() ) 
@@ -34,7 +35,7 @@ export function aufgabe03 (args) {
   const result = []
 
   let countE = 0
-
+// zaehlt alle E und gibt diese dann als zahlenwert zurück
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
 
@@ -54,7 +55,7 @@ export function aufgabe04 (args) {
   const result = []
 
   let countEr = 1
-
+//zählt die leerzeichen und gibt diese dann wieder als zahl zurück + 1
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
@@ -72,7 +73,7 @@ export function aufgabe05 (args) {
   
   for (let i = 0; i < input.length; i++) {
     const currentAscii = input[i].charCodeAt(0)
-   
+   //gibt den ascii wert aus
     if (65 <= currentAscii && currentAscii <=90) return true
     
   }
