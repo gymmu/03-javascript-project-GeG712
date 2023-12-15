@@ -413,10 +413,20 @@ export function aufgabe21 (args) {
   const result = []
   
 for (let i = 0; i < input.length; i++) {
-  const currentElement = input[i]
+//dreht die Zeichen um, indem man alle werte mit der anzahl an elementen subtrahiert.
   result.push(input[input.length - 1 - i])
 }
 
+  return result.join("")
+}
+
+export function aufgabe22 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
   return result.join("")
 }
 
