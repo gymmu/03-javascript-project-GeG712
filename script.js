@@ -208,8 +208,13 @@ export function aufgabe11 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-    return currentElement.charCodeAt(0)
-    
+if (input.length > 1) {
+  return null
+}
+
+else if(currentElement.length === 1){
+  return currentElement.charCodeAt(0)
+}
   }
 
 return null
@@ -330,14 +335,12 @@ export function aufgabe16 (args) {
 }
 
 export function aufgabe17 (args) {
-  const input = args
-  const result = []
-  const phrases = []
-
+  const text = args
+const phrases = []
 let currentPhrase = []
 for (let i = 0; i < text.length; i++) {
   const currentElement = text[i]
-  if (currentElement === ".") {
+  if (currentElement === ",") {
     // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
     phrases.push(currentPhrase.join(""))
     currentPhrase = [] // Damit löschen wir alles was im aktuellen Satz drin war.
@@ -346,10 +349,34 @@ for (let i = 0; i < text.length; i++) {
     currentPhrase.push(currentElement)
   }
 }
-phases.push(currentPhrase.join(""))
-console.log(phrases)
+phrases.push(currentPhrase.join(""))
+return phrases
+}
 
-  return result.join("")
+export function aufgabe18 (args) {
+  const input = args
+  const inputName = []
+  const inputAge = []
+  let readText = true
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+    if (currentElement === " " && readText !== false) {
+      readText = false
+    } else {
+      if (readText === true) {
+        inputName.push(currentElement)
+      }
+      else if (readText === false) {
+        inputAge.push(currentElement)
+      }
+    }
+  }
+  if (inputName.join("") !== "" && inputAge.join("") !== "") return "Sie heissen " + inputName.join("") + " und sind " + inputAge.join("") + " Jahre alt"
+  if (inputName.join("") == "" && inputAge.join("") !== "") return "Sie heissen" + inputName.join("") + " und sind " + inputAge.join("") + " Jahre alt"
+  if (inputName.join("") !== "" && inputAge.join("") == "") return "Sie heissen " + inputName.join("") + " und sind " + inputAge.join("") + "Jahre alt"
+  if (inputName.join("") == "" && inputAge.join("") == "") return "Sie heissen" + inputName.join("") + " und sind " + inputAge.join("") + "Jahre alt"
 }
 
 export function aufgabe19 (args) {
@@ -382,7 +409,30 @@ export function aufgabe20 (args) {
 }
 
 
+
 export function aufgabe26(args) {
+  const input = args
+  let result = []
+const list = input.split("") // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+for (let i = 0; i < list.length - 1; i++) {
+  const currentElement = list[i]
+  const nextElement = list[i + 1]
+  if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+    // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+    const tmp = list[i + 1]
+    list[i + 1] = list[i]
+    list[i] = tmp
+    i = -1 // starte von vorne wenn etwas vertauscht wurde.
+  }
+}
+result = list.join("")
+  return result
+}
+
+
+
+
+export function bubbleSort(args) {
   const input = args
   let result = []
 const list = input.split("") // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
