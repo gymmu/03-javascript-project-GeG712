@@ -360,7 +360,7 @@ export function aufgabe18 (args) {
   const inputName = []
   const inputAge = []
   let readText = true
-
+// erkennt das erste wort als den namen an und das 2. wort als das Alter
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     
@@ -374,7 +374,7 @@ export function aufgabe18 (args) {
         inputAge.push(currentElement)
       }
     }
-  }
+  }// die verschiedenen varianten in welchen man das erkennt und wieder zurückgibt
   if (inputName.join("") !== "" && inputAge.join("") !== "") return "Sie heissen " + inputName.join("") + " und sind " + inputAge.join("") + " Jahre alt"
   if (inputName.join("") == "" && inputAge.join("") !== "") return "Sie heissen" + inputName.join("") + " und sind " + inputAge.join("") + " Jahre alt"
   if (inputName.join("") !== "" && inputAge.join("") == "") return "Sie heissen " + inputName.join("") + " und sind " + inputAge.join("") + "Jahre alt"
@@ -384,7 +384,7 @@ export function aufgabe18 (args) {
 export function aufgabe19 (args) {
   const input = args
   const result = []
-  
+  //gibt den ganzen Text 2 mal zurück
 for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
   result.push(currentElement)
@@ -398,7 +398,7 @@ for (let i = 0; i < input.length; i++) {
 export function aufgabe20 (args) {
   const input = args
   const result = []
-  
+  //kontroliert ob nach dem Punkt ein leerzeichen kommt und sagt demnach wahr oder falsch
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if(currentElement == "." && input[i+1] !== " ") return false
