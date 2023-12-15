@@ -114,7 +114,7 @@ export function aufgabe06(args) {
   
   for (let i = 0; i < input.length; i++) {
     const ascii = input[i].charCodeAt(0)
-
+//kontroloert den input mit den ascii werten und sagt an ob es sich um einen Sonderzeichen handelt
     if(0 <= ascii && ascii <=31) return true
     else if (33 <= ascii && ascii <= 47) return true
     else if (58 <= ascii && ascii <= 64) return true
@@ -131,7 +131,7 @@ export function aufgabe06(args) {
 export function aufgabe07 (args) {
   const input = args
   const result = []
-  
+  // erkennt die wort UND in der rheienfolge und sagt ob diese Wort vorkommt
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if(currentElement === "u" || input[0] === "U") {
@@ -153,7 +153,7 @@ export function aufgabe08(args) {
 
   for (let i = 0; i < input.length; i++) {      
     const currentElement = input[i]        
-
+//erkennt ob es sich um ein E handelt und wechselt diese zur 3
     if (currentElement === "e") {   
       result.push(3)                                                           
     } else {                                                 
@@ -168,7 +168,7 @@ export function aufgabe08(args) {
 export function aufgabe09 (args) {
   const input = args
 
-
+//zählt die länge des Input und sagt ob es eine länge von 6 hat
 let len = 0
 
   for (let i = 0; i < input.length; i++) {
@@ -183,7 +183,7 @@ let len = 0
 
 export function aufgabe10 (args) {
   const input = args
-  
+  //kontrolert ob es sich um eine Hexadezimalzahl handelt
   if(input.length !== 7) return false
   if(input[0] !== "#") return false
   for (let i = 1; i < input.length; i++) {
