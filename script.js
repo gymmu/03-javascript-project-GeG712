@@ -212,7 +212,7 @@ export function aufgabe11 (args) {
 if (input.length > 1) {
   return null
 }
-
+//gibt den ascii code eines einzelnen zeichen an sagt aber null sobald es mehr als 1 Zeichen gibt
 else if(currentElement.length === 1){
   return currentElement.charCodeAt(0)
 }
@@ -231,7 +231,7 @@ export function aufgabe12 (args) {
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
       
-
+//zählt die anzahl der E und gibt dessen position an
       if(currentElement=== "e"){
         Count++
         if (Count === 1) {
@@ -251,7 +251,7 @@ export function aufgabe13 (args) {
   let posE= -1 
   for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
-
+//zählt die E und gibt die position des letzten es an
   if(currentElement=== "e"){
     posE = i
   }
@@ -269,7 +269,7 @@ export function aufgabe14 (args) {
   for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
 
-
+//gibt und die position des 3. es sobald 3 gezählt wurden
 
   if(currentElement=== "e"){
    Count++
@@ -286,6 +286,7 @@ export function aufgabe15 (args) {
   const input = args
   const result = []
 
+  //gibt alle wörter bis zum letzten leerzeichen
   if (input.lastIndexOf(' ') == input.length - 1) {
       for (let i = 0; i < input.length - 1; i++) {
         const currentElement = input[i]
@@ -313,7 +314,7 @@ export function aufgabe16 (args) {
   const result1 = []
   const result2 = []
   let Text = true
-
+//erkennt ob es sich um einen Dollar handelt und spaltet danach den text in den 2. Teil
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     
