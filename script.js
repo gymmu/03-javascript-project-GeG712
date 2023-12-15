@@ -423,12 +423,40 @@ for (let i = 0; i < input.length; i++) {
 export function aufgabe22 (args) {
   const input = args
   const result = []
+  let condition = false
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     
+    if (currentElement === "k") {
+      condition = true
+    }
+    
+    if (condition === true) {
+      result.push(currentElement)
+    } else {
+      result.push("_")
+    }
   }
   return result.join("")
 }
+
+export function aufgabe23 (args) {
+  const input = args
+  const result = []
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+  // hänge das erste Zeichen nochmals vorne an.
+  result.unshift(result[0])
+  // hänge das erste Zeichen nochmals an
+  result.push(result[0])
+
+
+  return result.join("")
+}
+
 
 export function aufgabe26(args) {
   const input = args
