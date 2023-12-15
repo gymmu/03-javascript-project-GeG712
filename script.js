@@ -473,6 +473,19 @@ export function aufgabe24(args) {
   return result.join("");
 }  
 
+export function aufgabe25(args) {
+  const input = args;
+  const result = [];
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i];
+    if (i !== Math.floor(input.length / 2)) {
+      result.push(currentElement);
+    }
+  }
+
+  return result.join("");
+}
 
 export function aufgabe26(args) {
   const input = args
