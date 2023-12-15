@@ -428,11 +428,11 @@ export function aufgabe22 (args) {
   let condition = false
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    
+    //erkennt ob es sich um ein k handelt
     if (currentElement === "k") {
       condition = true
     }
-    
+    //erkennt falls die condition true ist werden alle Elemente angehängt sonst wird es ein _ 
     if (condition === true) {
       result.push(currentElement)
     } else {
