@@ -408,7 +408,17 @@ export function aufgabe20 (args) {
 
 }
 
+export function aufgabe21 (args) {
+  const input = args
+  const result = []
+  
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+  result.push(input[input.length - 1 - i])
+}
 
+  return result.join("")
+}
 
 export function aufgabe26(args) {
   const input = args
