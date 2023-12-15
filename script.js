@@ -457,6 +457,22 @@ export function aufgabe23 (args) {
   return result.join("")
 }
 
+export function aufgabe24(args) {
+  const input = args;
+  const result = [];
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i];
+    result.push(currentElement);
+  }
+  // tausche das erste und letzte Zeichen
+  const firstChar = result[0];
+  const lastChar = result[result.length - 1];
+  result[0] = lastChar;
+  result[result.length - 1] = firstChar;
+  
+  return result.join("");
+}  
+
 
 export function aufgabe26(args) {
   const input = args
